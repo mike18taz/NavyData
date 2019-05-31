@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.downs.navydata.DataMainActivity"
+    android:id="@+id/personal_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_menu_height"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttons_data"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+
+            android:gravity="bottom|center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_marginTop="-6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="deleteSailorData"
+                android:text="@string/delete_button_text"
+                android:visibility="visible"
+                android:id="@+id/button" />
+
+            <Button
+                android:layout_marginTop="-6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="editSailorData"
+                android:text="@string/edit_data_text"
+                android:visibility="visible" />
+
+
+
+        </LinearLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:onClick="seeAwaf"
+            android:text="@string/awaf"
+            android:visibility="visible"
+            android:layout_gravity="bottom"
+            android:id="@+id/button_awaf" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:onClick="seeUnitList"
+            android:text="@string/data"
+            android:visibility="visible"
+            android:layout_gravity="bottom"
+            android:id="@+id/button_data"/>
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:onClick="seeLinks"
+            android:text="@string/links"
+            android:visibility="visible"
+            android:layout_gravity="bottom"
+            android:id="@+id/button_links" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:onClick="seeMrrr"
+            android:text="@string/mrrr"
+            android:visibility="visible"
+            android:layout_gravity="bottom"
+            android:id="@+id/button_mrrr"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:id="@+id/personal_data"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/name_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:layout_columnSpan="1"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:inputType="textCapCharacters"
+            android:layout_columnSpan="2"/>
+
+        <TextView
+            android:id="@+id/unit_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unit"
+            android:layout_columnSpan="1"/>
+
+        <EditText
+            android:id="@+id/unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/unit"
+            android:inputType="textCapCharacters"
+            android:layout_columnSpan="2"/>
+
+        <TextView
+            android:id="@+id/nosc_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nosc"
+            android:layout_columnSpan="1"/>
+
+        <EditText
+            android:id="@+id/nosc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/nosc"
+            android:inputType="textCapCharacters"
+            android:layout_columnSpan="2"/>
+
+        <EditText
+            android:id="@+id/truic"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/truic"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/umuic"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/umuic"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/nosc_uic"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/nosc_uic"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/truic_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/truic"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/umuic_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/umuic"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/nosc_uic_description"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nosc_uic"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/mob_activity_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mob_activity"
+            android:layout_columnSpan="1"/>
+        <EditText
+            android:id="@+id/mob_activity"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/mob_activity"
+            android:inputType="textCapCharacters"
+            android:layout_columnSpan="2"/>
+        <TextView
+            android:id="@+id/mob_billet_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mob_billet"
+            android:layout_columnSpan="1"/>
+        <EditText
+            android:id="@+id/mob_billet"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/mob_billet"
+            android:inputType="textCapCharacters"
+            android:layout_columnSpan="2"/>
+
+        <EditText
+            android:id="@+id/prd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/eaos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/ced"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/prd_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prd"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin"/>
+
+        <TextView
+            android:id="@+id/eaos_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eaos"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/ced_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ced"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <EditText
+            android:id="@+id/report_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/rank_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/clearance_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/report_date_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/report_date"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/rank_date_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rank_date"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/clearance_date_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clearance_date"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+    </GridLayout>
+
+</RelativeLayout>

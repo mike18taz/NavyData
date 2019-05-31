@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.downs.navydata.DataActivity"
+    tools:showIn="@layout/activity_data">
+
+    <LinearLayout
+        android:id="@+id/tools_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:id="@+id/personal_data"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/name_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:layout_columnSpan="1"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:inputType="textCapCharacters"
+            android:layout_columnSpan="2"/>
+
+        <TextView
+            android:id="@+id/unit_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unit"
+            android:layout_columnSpan="1"/>
+
+        <EditText
+            android:id="@+id/unit"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/unit"
+            android:inputType="textCapCharacters"
+            android:layout_columnSpan="2"/>
+
+        <TextView
+            android:id="@+id/nosc_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nosc"
+            android:layout_columnSpan="1"/>
+
+        <EditText
+            android:id="@+id/nosc"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/nosc"
+            android:inputType="textCapCharacters"
+            android:layout_columnSpan="2"/>
+
+        <EditText
+            android:id="@+id/truic"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/truic"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/umuic"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/umuic"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/nosc_uic"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/nosc_uic"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/truic_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/truic"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/umuic_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/umuic"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/nosc_uic_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nosc_uic"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/mob_activity_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mob_activity"
+            android:layout_columnSpan="1"/>
+        <EditText
+            android:id="@+id/mob_activity"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/mob_activity"
+            android:inputType="textCapCharacters"
+            android:layout_columnSpan="2"/>
+        <TextView
+            android:id="@+id/mob_billet_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mob_billet"
+            android:layout_columnSpan="1"/>
+        <EditText
+            android:id="@+id/mob_billet"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/mob_billet"
+            android:inputType="textCapCharacters"
+            android:layout_columnSpan="2"/>
+
+        <EditText
+            android:id="@+id/prd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/eaos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/ced"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/prd_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prd"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin"/>
+
+        <TextView
+            android:id="@+id/eaos_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eaos"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/ced_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ced"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <EditText
+            android:id="@+id/report_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/rank_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/clearance_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_default"
+            android:inputType="date"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/report_date_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/report_date"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/rank_date_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rank_date"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/description_margin" />
+
+        <TextView
+            android:id="@+id/clearance_date_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clearance_date"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/description_margin" />
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/personal_data"
+        android:id="@+id/buttons_data"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+
+        android:gravity="bottom|center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="deleteSailorData"
+            android:text="@string/delete_button_text"
+            android:visibility="visible" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="editSailorData"
+            android:text="@string/edit_data_text"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>
